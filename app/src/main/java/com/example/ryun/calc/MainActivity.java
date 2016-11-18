@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         double num2 = Double.parseDouble(text2.getText().toString());
         double value = 0;
 
-        if(text1.getText().equals("") || text2.getText().equals("")){
+        if(text1.getText().equals(null) || text2.getText().equals(null)){
             Toast.makeText(getApplicationContext(), "값을 입력하여 주십시오", Toast.LENGTH_SHORT).show();
         }
         else{
