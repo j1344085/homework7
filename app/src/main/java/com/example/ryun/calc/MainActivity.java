@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 if(num2 == 0){
                     Toast.makeText(getApplicationContext(), "0으로는 나눌수 없습니다", Toast.LENGTH_SHORT).show();
                     return;
+                    /*리턴추가*/
                 }
                 else{ value = num1 / num2; }
             }
