@@ -72,4 +72,10 @@
         android:textColor="@android:color/holo_red_dark"
         android:textSize="36sp" />
 
+    <Button
+        android:text="두번째로 넘어가기"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button6" />
+
 </LinearLayout>

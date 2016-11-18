@@ -1,7 +1,9 @@
 package com.example.ryun.calc;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn3;
     Button btn4;
     Button btn5;
+    Button btn6;
     EditText text1;
     EditText text2;
     TextView textV1;
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btn3 = (Button)findViewById(R.id.button3);
         btn4 = (Button)findViewById(R.id.button4);
         btn5 = (Button)findViewById(R.id.button5);
+        btn6 = (Button)findViewById(R.id.button6);
         text1 = (EditText)findViewById(R.id.editText2);
         text2 = (EditText)findViewById(R.id.editText3);
         textV1 = (TextView)findViewById(R.id.textView3);
@@ -64,6 +68,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Op('%');
+            }
+        });
+        btn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("onClick", "Main2Activity");
+                Intent intentSubActivity = new Intent(MainActivity.this, Main2Activity.class);
+                startActivity(intentSubActivity);
             }
         });
     }
