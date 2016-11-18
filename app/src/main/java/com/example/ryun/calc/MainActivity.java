@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn2;
     Button btn3;
     Button btn4;
+    Button btn5;
     EditText text1;
     EditText text2;
     TextView textV1;
@@ -23,13 +24,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn1 = (Button) findViewById(R.id.button);
-        btn2 = (Button) findViewById(R.id.button2);
-        btn3 = (Button) findViewById(R.id.button3);
-        btn4 = (Button) findViewById(R.id.button4);
-        text1 = (EditText) findViewById(R.id.editText2);
-        text2 = (EditText) findViewById(R.id.editText3);
-        textV1 = (TextView) findViewById(R.id.textView3);
+        btn1 = (Button)findViewById(R.id.button);
+        btn2 = (Button)findViewById(R.id.button2);
+        btn3 = (Button)findViewById(R.id.button3);
+        btn4 = (Button)findViewById(R.id.button4);
+        btn5 = (Button)findViewById(R.id.button5);
+        text1 = (EditText)findViewById(R.id.editText2);
+        text2 = (EditText)findViewById(R.id.editText3);
+        textV1 = (TextView)findViewById(R.id.textView3);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +60,12 @@ public class MainActivity extends AppCompatActivity {
                 Op('/');
             }
         });
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Op('%');
+            }
+        });
     }
 
     void Op(char op) {
@@ -80,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{ value = num1 / num2; }
             }
+            if(op == '%'){ value = num1 % num2; }
         }
 
         textV1.setText("계산 결과 : " + value);

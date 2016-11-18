@@ -57,6 +57,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/button4" />
 
+    <Button
+        android:text="나머지 값"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button5" />
+
     <TextView
         android:text="계산 결과 : "
         android:layout_width="match_parent"
