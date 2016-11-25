@@ -46,20 +46,36 @@ public class Main2Activity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(chk1.isChecked() == true){
                     hiddenLayout.setVisibility(View.VISIBLE);
-
-                    if(btn1.isSelected() == true){
-                        dog2.setImageResource(R.drawable.dog);
-                    }
-                    if(btn2.isSelected() == true){
-                        cat1.setImageResource(R.drawable.cat);
-                    }
-                    if(btn3.isSelected() == true){
-                        rabbit3.setImageResource(R.drawable.rabbit);
-                    }
-
                 }
                 else hiddenLayout.setVisibility(View.GONE);
             }
         });
+
+        btn1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked) {
+                    img.setImageResource(R.drawable.dog);
+                }
+            }
+        });
+        btn2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked) {
+                    img.setImageResource(R.drawable.cat);
+                }
+            }
+        });
+        btn3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked) {
+                    img.setImageResource(R.drawable.rabbit);
+                }
+            }
+        });
+
+
     }
 }
